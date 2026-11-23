@@ -5,7 +5,7 @@ export default function Footer({ onSwitchTab }) {
   return (
     <footer className="wiki-footer">
       <ul className="wiki-footer-info">
-        <li>This page was last edited on 23 November 2026, at 12:37 (UTC).</li>
+        <li>This page was last edited on 23 November 2026, at 12:52 (UTC).</li>
         <li>
           Text is available under the{' '}
           <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">

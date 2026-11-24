@@ -15,31 +15,31 @@ export default function StickyHeader({ activeTab, onSwitchTab }) {
     <header className={`wiki-sticky-header ${isVisible ? 'visible' : ''}`} aria-hidden={!isVisible}>
       <div className="wiki-sticky-start">
         <span className="wiki-sticky-title">
-          {activeTab === 'about' 
-            ? 'Aaron Lee Apolonio' 
+          {activeTab === 'about'
+            ? 'Aaron Lee Apolonio'
             : 'Aaron Lee Apolonio: Works'}
         </span>
       </div>
 
       <div className="wiki-sticky-actions">
-        <button 
-          type="button" 
+        <button
+          type="button"
           className={`wiki-header-btn ${activeTab === 'about' ? 'active' : ''}`}
           style={{ fontWeight: activeTab === 'about' ? 'bold' : 'normal', color: activeTab === 'about' ? '#ffffff' : '#999999' }}
           onClick={() => onSwitchTab('about')}
         >
           About me
         </button>
-        <button 
-          type="button" 
+        <button
+          type="button"
           className={`wiki-header-btn ${activeTab === 'works' ? 'active' : ''}`}
           style={{ fontWeight: activeTab === 'works' ? 'bold' : 'normal', color: activeTab === 'works' ? '#ffffff' : '#999999' }}
           onClick={() => onSwitchTab('works')}
         >
           Works
         </button>
-        <a 
-          href="/assets/cv_apolonio-aaron-lee.pdf"
+        <a
+          href="/assets/aaronleeapolonio-cv.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="wiki-header-btn"

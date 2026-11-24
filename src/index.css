@@ -43,13 +43,19 @@
 }
 
 /* Reset and Base */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-h1, h3, h4, h5, h6,
+h1,
+h3,
+h4,
+h5,
+h6,
 .wiki-article-title,
 .wiki-h3,
 .wiki-infobox-header,
@@ -59,7 +65,12 @@ h1, h3, h4, h5, h6,
   font-family: var(--font-serif);
 }
 
-h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
+h1 *,
+h2 *,
+h3 *,
+h4 *,
+h5 *,
+h6 *,
 .wiki-article-title *,
 .wiki-h2 *,
 .wiki-h3 *,
@@ -119,11 +130,14 @@ body {
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at 50% 35%, transparent 25%, rgba(0, 0, 0, 0.65) 100%),
-              linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.5) 100%);
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.5) 100%);
   pointer-events: none;
 }
 
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
   font-family: var(--font-sans);
   color: #ffffff;
 }
@@ -219,7 +233,7 @@ a:hover {
   font-weight: bold;
   color: #fff;
   border: 1px solid var(--wiki-border-light);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   flex-shrink: 0;
   user-select: none;
 }
@@ -450,8 +464,15 @@ a:hover {
 }
 
 @keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-6px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ===================================================================
@@ -621,7 +642,8 @@ a:hover {
   position: relative;
 }
 
-.wiki-tabs-left, .wiki-tabs-right {
+.wiki-tabs-left,
+.wiki-tabs-right {
   display: flex;
   list-style: none;
   margin: 0;
@@ -1602,8 +1624,15 @@ a:hover {
 }
 
 @keyframes modalPop {
-  from { opacity: 0; transform: scale(0.96); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .wiki-modal-header {
@@ -1717,9 +1746,11 @@ a:hover {
     padding: 14px 18px 36px;
     gap: 20px;
   }
+
   .wiki-content-layout {
     flex-direction: column;
   }
+
   .wiki-sidebar-left {
     width: 100%;
     margin-bottom: 16px;
@@ -1732,36 +1763,47 @@ a:hover {
   .wiki-header {
     padding: 8px 14px;
   }
+
   .wiki-header-center {
     display: none;
   }
+
   .wiki-brand-subtitle {
     display: none;
   }
+
   .wiki-body-container {
     padding: 12px 14px 28px;
   }
+
   .wiki-article-title {
     font-size: 1.7rem;
   }
+
   .wiki-ascii-banner {
     font-size: 0.85rem;
   }
+
   .wiki-infobox {
     float: none;
     width: 100%;
     margin: 16px 0;
   }
+
   .wiki-infobox-image {
     height: 320px;
   }
+
   .wiki-toolbar {
     flex-direction: column;
     align-items: flex-start;
   }
-  .wiki-tabs-left, .wiki-tabs-right {
+
+  .wiki-tabs-left,
+  .wiki-tabs-right {
     width: 100%;
   }
+
   .wiki-tab-link {
     padding: 6px 12px;
     font-size: 0.85rem;
@@ -1788,8 +1830,15 @@ a:hover {
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Credentials & Certificate List */
@@ -1857,8 +1906,15 @@ a:hover {
 }
 
 @keyframes wikiFadeIn {
-  from { opacity: 0; transform: scale(0.97); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* ===================================================================
@@ -2198,6 +2254,3 @@ a:hover {
     display: inline;
   }
 }
-
-
-

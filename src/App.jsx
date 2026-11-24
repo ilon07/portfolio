@@ -224,9 +224,9 @@ export default function App() {
   // Update Page Title
   useEffect(() => {
     if (activeTab === 'about') {
-      document.title = "Aaron Lee Apolonio - Wikipedia, the free encyclopedia";
+      document.title = "Aaron Lee Apolonio | ilon";
     } else {
-      document.title = "Aaron Lee Apolonio: Works - Wikipedia";
+      document.title = "Aaron Lee Apolonio | ilon - Works";
     }
   }, [activeTab]);
 
@@ -407,7 +407,7 @@ export default function App() {
             </li>
             <li className="wiki-tab-item">
               <a
-                href="/assets/cv_apolonio-aaron-lee.pdf"
+                href="/assets/aaronleeapolonio-cv.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="wiki-tab-link tab-resume"

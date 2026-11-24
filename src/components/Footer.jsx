@@ -29,7 +29,7 @@ export default function Footer({ onSwitchTab }) {
           </a>
         </li>
         <li>
-          <a href="/assets/cv_apolonio-aaron-lee.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/assets/aaronleeapolonio-cv.pdf" target="_blank" rel="noopener noreferrer">
             Resume
           </a>
         </li>

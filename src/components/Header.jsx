@@ -49,8 +49,8 @@ export default function Header({ activeTab, onSwitchTab, onNavigateSection }) {
           </svg>
         </button>
 
-        <a 
-          href="#about" 
+        <a
+          href="#about"
           className="wiki-brand"
           onClick={(e) => { e.preventDefault(); onSwitchTab('about'); }}
         >
@@ -68,10 +68,10 @@ export default function Header({ activeTab, onSwitchTab, onNavigateSection }) {
           <svg className="wiki-search-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path>
           </svg>
-          <input 
-            type="text" 
-            className="wiki-search-input" 
-            placeholder="Search Aaron Lee Apolonio (e.g. Kubernetes, Terraform)" 
+          <input
+            type="text"
+            className="wiki-search-input"
+            placeholder="Search Aaron Lee Apolonio (e.g. Kubernetes, Terraform)"
             value={searchQuery}
             onChange={(e) => {
               setSearchQuery(e.target.value);
@@ -89,8 +89,8 @@ export default function Header({ activeTab, onSwitchTab, onNavigateSection }) {
               </div>
             ) : (
               searchResults.map((item, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="wiki-search-item"
                   onClick={() => handleSelectResult(item)}
                 >

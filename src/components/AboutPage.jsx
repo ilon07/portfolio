@@ -19,10 +19,23 @@ const credentials = [
   { title: 'Kyokugen: CTF Competition 2026 | Team 2nd Place', desc: 'Achieved Team 2nd Place in the Kyokugen CTF Competition 2026.', issuer: 'Kyokugen', icon: 'fas fa-trophy', url: '/assets/kyokugenctf.jpg' },
   { title: 'Kaspersky CTF 2026 | Asia/Oceana Team Placement: 105/635', desc: 'Participated in the Kaspersky CTF 2026 cybersecurity competition.', issuer: 'Kaspersky', icon: 'fas fa-shield-halved', url: '/assets/kasperskyctf.png' },
   { title: 'Pointer Overflow CTF 2026 | Top 4/68 in Academics, Top 9/1253 Overall', desc: 'Achieved Top 4 out of 68 academic teams in the Pointer Overflow CTF 2026 competition.', issuer: 'University of Wisconsin - Stevens Point', icon: 'fas fa-trophy', url: '/assets/pointer_overflow_ctf_2026.pdf' },
-  { title: 'UMAK 15th IT Skills Olympics 2026 | Top 4 Overall, Top 2 Batch 2 Cybersecurity Category', desc: 'Competed in the Cybersecurity Category at the University of Makati 15th IT Skills Olympics, placing Top 4 Overall and Top 2 in Batch 2 representing Pamantasan ng Lungsod ng Valenzuela.', issuer: 'University of Makati', icon: 'fas fa-trophy', url: '/assets/umak_15th_cybersec_cert_2026.pdf' }
+  { title: 'UMAK 15th IT Skills Olympics 2026 | Top 4 Overall, Top 2 Batch 2 Cybersecurity Category', desc: 'Competed in the Cybersecurity Category at the University of Makati 15th IT Skills Olympics, placing Top 4 Overall and Top 2 in Batch 2 representing Pamantasan ng Lungsod ng Valenzuela.', issuer: 'University of Makati', icon: 'fas fa-trophy', url: '/assets/umak_15th_cybersec_cert_2026.pdf' },
+  { title: 'OPSWAT: Introduction to Critical Infrastructure Protection (ICIP)', desc: 'Credential verifying foundational understanding of critical infrastructure protection, threat vectors, and cybersecurity defense.', issuer: 'OPSWAT Academy', icon: 'fas fa-certificate', url: '/assets/opswat_icip_cert.png', previewImage: '/assets/opswat_icip_cert.png' }
 ];
 
 const badgeCategories = [
+  {
+    category: 'OPSWAT',
+    items: [
+      {
+        id: 'opswat-icip',
+        name: 'Introduction to Critical Infrastructure Protection (ICIP)',
+        image: '/assets/opswat_icip_badge.png',
+        certUrl: 'https://www.credly.com/badges/2b28c7b2-f115-41ea-9a37-54ac3d94812a/public_url',
+        previewImage: '/assets/opswat_icip_cert.png',
+      },
+    ],
+  },
   {
     category: 'Cyber404',
     items: [
@@ -344,7 +357,7 @@ export default function AboutPage({ onOpenSource, onOpenLightbox, onPlayAudio })
                     rel="noopener noreferrer"
                     className="wiki-badge-minimal-img-link"
                     onMouseEnter={(e) => {
-                      setHoveredCred({ title: b.name, url: b.certUrl });
+                      setHoveredCred({ title: b.name, url: b.certUrl, previewImage: b.previewImage || b.image });
                       handleCredMouseMove(e);
                     }}
                     onMouseMove={handleCredMouseMove}
@@ -359,7 +372,7 @@ export default function AboutPage({ onOpenSource, onOpenLightbox, onPlayAudio })
                     rel="noopener noreferrer"
                     className="wiki-badge-minimal-name-link"
                     onMouseEnter={(e) => {
-                      setHoveredCred({ title: b.name, url: b.certUrl });
+                      setHoveredCred({ title: b.name, url: b.certUrl, previewImage: b.previewImage || b.image });
                       handleCredMouseMove(e);
                     }}
                     onMouseMove={handleCredMouseMove}
@@ -386,8 +399,8 @@ export default function AboutPage({ onOpenSource, onOpenLightbox, onPlayAudio })
             zIndex: 999999,
           }}
         >
-          {hoveredCred.url ? (
-            /\.pdf$/i.test(hoveredCred.url) ? (
+          {hoveredCred.url || hoveredCred.previewImage ? (
+            hoveredCred.url && /\.pdf$/i.test(hoveredCred.url) ? (
               <iframe
                 src={`${hoveredCred.url}#view=FitH&toolbar=0&navpanes=0&scrollbar=0`}
                 title={hoveredCred.title}
@@ -396,7 +409,7 @@ export default function AboutPage({ onOpenSource, onOpenLightbox, onPlayAudio })
               />
             ) : (
               <img
-                src={hoveredCred.url}
+                src={hoveredCred.previewImage || hoveredCred.url}
                 alt={hoveredCred.title}
                 className="wiki-cert-hover-img"
               />

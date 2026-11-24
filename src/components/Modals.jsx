@@ -30,6 +30,7 @@ export function ViewSourceModal({ isOpen, onClose, activeTab, onCopy }) {
 * '''Cybersec & Networking:''' Kali Linux, Wireshark, Burp Suite, Cisco Packet Tracer
 
 == Achievements ==
+* OPSWAT Introduction to Critical Infrastructure Protection (ICIP)
 * Cisco Networking Academy Digital Badges & Certifications
 * Cyber404 Certified Cybersecurity Associate (CCA)
 * Pointer Overflow CTF 2026 — Top 4 Academics, Top 9 Overall
